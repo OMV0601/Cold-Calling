@@ -1,0 +1,15 @@
+# Core HTTP + parsing
+requests==2.32.3
+beautifulsoup4==4.12.3
+lxml==5.2.2
+
+# Config + secrets
+pyyaml==6.0.2
+python-dotenv==1.0.1
+
+# Output
+pandas==2.2.2
+openpyxl==3.1.4
+
+# CLI display
+rich==13.7.1

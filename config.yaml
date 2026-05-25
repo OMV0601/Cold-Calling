@@ -1,0 +1,81 @@
+# LeadScout configuration file.
+# Edit this file — no code changes needed to re-run for different cities/categories.
+
+# ── Search areas ─────────────────────────────────────────────────────────────
+# Each entry is searched independently; results are combined in the output.
+search_areas:
+  - "Seattle, WA"
+  - "Bellevue, WA"
+  - "Tacoma, WA"
+
+# ── Business categories ───────────────────────────────────────────────────────
+# Any term accepted by the Google Places searchText endpoint.
+categories:
+  - "barbershop"
+  - "auto repair"
+  - "dentist"
+  - "landscaping"
+  - "restaurant"
+
+# ── Lead filters ──────────────────────────────────────────────────────────────
+filters:
+  min_rating: 3.5
+  min_review_count: 10
+  # Attempt to skip national chains using fragment matching.
+  # Edit data/chain_fragments.txt to tune the list.
+  exclude_chains: true
+
+# ── Audit checks ──────────────────────────────────────────────────────────────
+audit:
+  # Comment out a check name to disable it without deleting anything.
+  enabled_checks:
+    # Conversion (severity: high)
+    - no_contact_form
+    - no_click_to_call
+    - no_visible_contact_info
+    - no_booking_or_ordering
+    - no_map_or_directions
+    # Trust (severity: medium)
+    - no_https
+    - no_testimonials
+    - no_real_photos
+    - stale_copyright
+    - broken_links_or_images
+    # Technical / SEO (severity: medium)
+    - not_mobile_responsive
+    - slow_load
+    - no_analytics
+    - weak_seo
+    - no_favicon
+    # Presence — derived from Places data, no site fetch needed (both tracks)
+    - few_listing_photos
+    - low_review_count
+
+  page_load_threshold_seconds: 4
+  # Footer copyright year is "stale" if older than (current_year - stale_copyright_years).
+  stale_copyright_years: 2
+  # A listing with fewer than this many photos triggers the few_listing_photos check.
+  min_listing_photos: 5
+  # Review count below this is flagged by the low_review_count presence check.
+  min_review_count_presence: 25
+
+# ── Scoring weights ───────────────────────────────────────────────────────────
+# Lead score = (rating * weight_rating)
+#            + (log(review_count + 1) * weight_review_count)
+#            + (high_gap_count * weight_gap_count * 2)
+#            + (medium_gap_count * weight_gap_count)
+scoring:
+  weight_rating: 1.0
+  weight_review_count: 1.0
+  weight_gap_count: 2.0
+
+# ── Output ────────────────────────────────────────────────────────────────────
+output:
+  format: "xlsx"          # "xlsx" or "csv"
+  path: "./output/leads.xlsx"
+
+# ── Caching ───────────────────────────────────────────────────────────────────
+cache:
+  db_path: "./cache/leadscout.db"
+  # Re-fetch a place (or web page) only if the cached entry is older than this.
+  ttl_days: 30

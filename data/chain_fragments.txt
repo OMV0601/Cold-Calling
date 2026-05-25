@@ -1,0 +1,120 @@
+# Chain / franchise name fragments — one per line, case-insensitive.
+# If any fragment appears in a business name, the business is flagged as a chain.
+# Add or remove lines freely; no code changes needed.
+
+# ── Fast food & QSR ──────────────────────────────────────────────────────────
+mcdonald
+subway
+starbucks
+dunkin
+pizza hut
+domino
+kfc
+taco bell
+burger king
+wendy
+chick-fil-a
+chipotle
+panera
+five guys
+shake shack
+panda express
+little caesars
+papa john
+jimmy john
+jersey mike
+arby
+sonic drive
+jack in the box
+carl's jr
+hardee
+popeye
+raising cane
+wingstop
+buffalo wild wing
+sweetgreen
+wingstop
+
+# ── Casual dining ────────────────────────────────────────────────────────────
+applebee
+chili's
+denny
+ihop
+cracker barrel
+olive garden
+red lobster
+outback
+longhorn steakhouse
+texas roadhouse
+tgi friday
+benihana
+p.f. chang
+cheesecake factory
+red robin
+hooters
+perkins
+bob evan
+golden corral
+
+# ── Auto repair chains ────────────────────────────────────────────────────────
+jiffy lube
+midas
+firestone
+pep boys
+meineke
+monro
+goodyear auto
+ntb national
+sears auto
+o'reilly auto
+autozone
+advance auto
+valvoline
+
+# ── Dental chains ─────────────────────────────────────────────────────────────
+aspen dental
+bright now
+western dental
+pacific dental
+smile direct
+clear choice
+family dental care
+
+# ── Hair / barbershop chains ──────────────────────────────────────────────────
+great clips
+sport clips
+cost cutter
+supercuts
+fantastic sam
+regis salon
+sport clips
+floyd's barbershop
+roosters men
+
+# ── Landscaping chains ────────────────────────────────────────────────────────
+trugreen
+weed man
+the grounds guys
+lawn love
+lawnstarter
+brickman
+brightview
+davey tree
+servicemaster
+
+# ── General service chains ────────────────────────────────────────────────────
+7-eleven
+cvs pharmacy
+walgreen
+rite aid
+dollar general
+dollar tree
+family dollar
+walmart
+target
+costco
+sam's club
+best buy
+home depot
+lowe's
+ace hardware

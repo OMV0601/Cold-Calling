@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"c:\\\\Users\\\\Vipul\\\\OneDrive\\\\00. Publication\\\\Cold-Calling\\\\leadscout\\\\audit\\\\checks\" \"c:\\\\Users\\\\Vipul\\\\OneDrive\\\\00. Publication\\\\Cold-Calling\\\\cache\" \"c:\\\\Users\\\\Vipul\\\\OneDrive\\\\00. Publication\\\\Cold-Calling\\\\output\" \"c:\\\\Users\\\\Vipul\\\\OneDrive\\\\00. Publication\\\\Cold-Calling\\\\data\")",
+      "Bash(pip install *)",
+      "Bash(python -c \"from leadscout.config import load_config, load_api_key; c = load_config\\(\\); print\\('search_areas:', c.search_areas\\); print\\('checks:', len\\(c.audit.enabled_checks\\), 'enabled'\\); print\\('output format:', c.output.format\\)\")",
+      "Bash(python -c ' *)",
+      "Bash(dir /a .env*)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Vipul\\OneDrive\\00. Publication\\Cold-Calling\\leadscout\\audit"
+    ]
+  }
+}
