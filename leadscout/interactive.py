@@ -193,7 +193,10 @@ def _print_popular_chips(console: Console) -> None:
 
 def _display_results_table(rows: list[LeadRow], console: Console) -> None:
     """Render a ranked results table sorted by lead score."""
-    sorted_rows = sorted(rows, key=lambda r: r.lead_score, reverse=True)
+    sorted_rows = sorted(
+        rows,
+        key=lambda r: (0 if r.lead_track.startswith("A") else 1, -r.lead_score),
+    )
 
     table = Table(
         title=f"[bold]Results — {len(rows)} lead(s) found[/bold]",

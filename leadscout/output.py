@@ -142,7 +142,9 @@ def _to_dataframe(rows: list[LeadRow]) -> pd.DataFrame:
         for row in rows
     ]
     df = pd.DataFrame(data, columns=_COL_HEADERS)
-    df = df.sort_values("Lead Score", ascending=False).reset_index(drop=True)
+    df["_track_order"] = df["Track"].apply(lambda t: 0 if str(t).startswith("A") else 1)
+    df = df.sort_values(["_track_order", "Lead Score"], ascending=[True, False])
+    df = df.drop(columns=["_track_order"]).reset_index(drop=True)
     return df
 
 
