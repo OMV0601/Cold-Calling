@@ -19,8 +19,8 @@ categories:
 
 # ── Lead filters ──────────────────────────────────────────────────────────────
 filters:
-  min_rating: 3.5
-  min_review_count: 10
+  min_rating: 3.0
+  min_review_count: 5
   # Attempt to skip national chains using fragment matching.
   # Edit data/chain_fragments.txt to tune the list.
   exclude_chains: true
